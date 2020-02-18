@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:weightSum="4"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/button100"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#E91E63"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:text="100개\n입력"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/button1000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:text="1000개\n입력"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/button10000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#009688"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:text="10000개\n입력"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/button500000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#673AB7"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:text="50만개\n입력"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listMainHobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutButton"/>
+
+    <TextView
+        android:id="@+id/textLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="... LOADING ..."
+        android:textSize="40sp"
+        android:textColor="#ffffff" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
